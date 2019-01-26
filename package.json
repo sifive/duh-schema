@@ -1,0 +1,29 @@
+{
+  "name": "duh-schema",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "eslint lib && mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sifive/duh-schema.git"
+  },
+  "author": "SiFive",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sifive/duh-schema/issues"
+  },
+  "homepage": "https://github.com/sifive/duh-schema#readme",
+  "devDependencies": {
+    "@drom/eslint-config": "0.8.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.12.1",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
+  },
+  "eslintConfig": {
+    "extends": "@drom/eslint-config/eslint4/node8"
+  }
+}
