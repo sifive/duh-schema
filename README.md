@@ -1,0 +1,1 @@
+DUH document JSON schema
