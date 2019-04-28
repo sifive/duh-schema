@@ -4,7 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "test": "eslint lib/ test/ && mocha test"
+    "test": "eslint lib/ test/ && nyc -r=text -r=lcov mocha"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,8 @@
     "ajv": "^6.8.1",
     "chai": "^4.2.0",
     "eslint": "^5.12.1",
-    "mocha": "^5.2.0",
-    "nyc": "^13.1.0"
+    "mocha": "^6.1.4",
+    "nyc": "^14.0.0"
   },
   "eslintConfig": {
     "extends": "@drom/eslint-config/eslint4/node8"
