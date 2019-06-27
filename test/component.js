@@ -1,11 +1,14 @@
 'use strict';
 
 const Ajv = require('ajv');
-const ajv = new Ajv();
 const lib = require('../lib/');
 
 describe('any', () => {
-  const validator = ajv.compile(lib.any);
+  const ajv = new Ajv();
+  const validate = ajv
+    .addSchema(lib.defs)
+    .compile(lib.any);
+
   [{
     component: {
       name: 'foo', library: 'bar', vendor: 'baz', version: '0.1.0',
@@ -31,10 +34,10 @@ describe('any', () => {
   }]
     .map((duh, idx) => {
       it((duh.name || 's' + idx), done => {
-        if (validator(duh)) {
+        if (validate(duh)) {
           done();
         } else {
-          console.log(validator.errors);
+          console.log(validate.errors);
           throw new Error();
         }
       });
