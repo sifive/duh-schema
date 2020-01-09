@@ -129,7 +129,7 @@ connections: [{
 ```js
 connections: [{
   name: 'ExportTL1',
-  master: {instance: 'xbar0', bus: 'tl_i0'},
+  source: {instance: 'xbar0', bus: 'tl_i0'},
   export: 'TL1'
 }]
 ```
