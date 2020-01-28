@@ -10,10 +10,10 @@
   <spirit:portMaps>
     <spirit:portMap>
       <spirit:logicalPort>
-        <spirit:name>CLK</spirit:name>
+        <spirit:name>Data</spirit:name>
       </spirit:logicalPort>
       <spirit:physicalPort>
-        <spirit:name>clk</spirit:name>
+        <spirit:name>mst_data</spirit:name>
       </spirit:physicalPort>
     </spirit:portMap>
   </spirit:portMaps>
@@ -26,6 +26,7 @@
 <ipxact:busInterface>
   <ipxact:name>...</ipxact:name>
   <ipxact:busType vendor="..." library="..." name="..." version="..."/>
+  <spirit:slave/>
   <ipxact:abstractionTypes>
     <ipxact:abstractionType>
       <ipxact:viewRef>RTLview</ipxact:viewRef>
@@ -48,4 +49,20 @@
     </ipxact:abstractionType>
   </ipxact:abstractionTypes>
 </ipxact:busInterface>
+```
+
+### DUH
+
+```js
+{
+  name: '...',
+  busType: {vendor: '...', library: '...', name: '...', version: '...'},
+  interfaceMode: 'slave',
+  abstractionTypes: [{
+    viewRef: 'RTLview',
+    portMaps: {
+      Data: 'mst_data'
+    }
+  }]
+}
 ```
