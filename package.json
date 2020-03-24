@@ -3,10 +3,15 @@
   "version": "0.9.1",
   "description": "DUH Schema",
   "main": "lib/index.js",
+  "unpkg": "dist/schema.json",
   "scripts": {
     "test": "eslint lib/ test/ && nyc -r=text -r=lcov mocha",
     "prepare": "node bin/prepare.js"
   },
+  "files": [
+    "lib",
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sifive/duh-schema.git"
@@ -17,10 +22,14 @@
     "url": "https://github.com/sifive/duh-schema/issues"
   },
   "homepage": "https://github.com/sifive/duh-schema#readme",
+  "engines": {
+    "node": ">=8"
+  },
   "devDependencies": {
     "@drom/eslint-config": "0.10.0",
     "ajv": "^6.12.0",
     "chai": "^4.2.0",
+    "coveralls": "^3.0.11",
     "eslint": "^6.8.0",
     "fs-extra": "^8.1.0",
     "mocha": "^7.1.0",
