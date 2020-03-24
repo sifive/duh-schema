@@ -4,7 +4,8 @@
   "description": "DUH Schema",
   "main": "lib/index.js",
   "scripts": {
-    "test": "eslint lib/ test/ && nyc -r=text -r=lcov mocha"
+    "test": "eslint lib/ test/ && nyc -r=text -r=lcov mocha",
+    "prepare": "node bin/prepare.js"
   },
   "repository": {
     "type": "git",
