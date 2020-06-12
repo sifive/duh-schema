@@ -1,6 +1,6 @@
 {
   "name": "duh-schema",
-  "version": "0.9.14",
+  "version": "0.9.15",
   "description": "DUH Schema",
   "main": "lib/index.js",
   "unpkg": "dist/schema.js",
