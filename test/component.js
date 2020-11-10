@@ -22,7 +22,7 @@ describe('any', () => {
     component: {
       name: 'foo', library: 'bar', vendor: 'baz', version: '0.1.0',
       busInterfaces: [],
-      model: {ports: []}
+      model: {ports: {}}
     }
   }, {
     abstractionDefinition: {
