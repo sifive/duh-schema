@@ -1,22 +1,22 @@
 'use strict';
 
 const Ajv = require('ajv');
-const meta = require('ajv/lib/refs/json-schema-draft-06.json');
+const meta = require('ajv/dist/refs/json-schema-draft-07.json');
+const ajvKeywords = require('ajv-keywords');
 const lib = require('../lib/');
 
 describe('meta', () => {
   it('any', async () => {
     const ajv = new Ajv({schemaId: 'auto'});
     const validate = ajv.addMetaSchema(meta).compile({});
-    validate(lib.any);
+    validate(lib.root);
   });
 });
 
-describe('any', () => {
+describe('some', () => {
   const ajv = new Ajv();
-  const validate = ajv
-    .addSchema(lib.defs)
-    .compile(lib.any);
+  ajvKeywords(ajv, ['uniqueItemProperties']);
+  const validate = ajv.compile(lib.root);
 
   [{
     component: {
