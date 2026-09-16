@@ -1,6 +1,5 @@
 [![NPM version](https://img.shields.io/npm/v/duh-schema.svg)](https://www.npmjs.org/package/duh-schema)
 [![Actions Status](https://github.com/sifive/duh-schema/workflows/Tests/badge.svg)](https://github.com/sifive/duh-schema/actions)
-[![Coverage Status](https://coveralls.io/repos/github/sifive/duh-schema/badge.svg?branch=master)](https://coveralls.io/github/sifive/duh-schema?branch=master)
 
 DUH document JSON schema
 
@@ -42,4 +41,4 @@ npm test
 
 `npm test` runs [ESLint](https://eslint.org) (flat config, [eslint 10](https://eslint.org) + [`@drom/eslint-config`](https://www.npmjs.com/package/@drom/eslint-config), rules in [`eslint.config.js`](eslint.config.js)), then [mocha](https://mochajs.org) unit tests with [c8](https://github.com/bcoe/c8) coverage (`text` + `lcov` reports to `coverage/`).
 
-CI: [GitHub Actions](.github/workflows/nodejs.yml), Node.js 22 / 24 / 26 on Linux, Windows, macOS. Coverage reported via [Coveralls](https://coveralls.io).
+CI: [GitHub Actions](.github/workflows/nodejs.yml), Node.js 22 / 24 / 26 on Linux, Windows, macOS.
