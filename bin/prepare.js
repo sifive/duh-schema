@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 'use strict';
 
-const fs = require('fs-extra');
+const fs = require('node:fs');
+const path = require('node:path');
 const schema = require('../lib/');
 
-async function main () {
-  const text = JSON.stringify(schema.root, null, 2);
-  await fs.outputFile('./dist/schema.json', text, 'utf8');
-}
-
-main();
+const text = JSON.stringify(schema.root, null, 2);
+fs.mkdirSync(path.join(__dirname, '..', 'dist'), {recursive: true});
+fs.writeFileSync(path.join(__dirname, '..', 'dist', 'schema.json'), text, 'utf8');

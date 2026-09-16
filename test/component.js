@@ -53,5 +53,3 @@ describe('some', () => {
     });
 
 });
-
-/* eslint-env mocha */
